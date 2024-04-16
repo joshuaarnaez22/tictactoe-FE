@@ -150,6 +150,7 @@ function App() {
         <>
           <div className=" h-screen space-y-4 flex flex-col justify-center items-center">
             <button
+              data-testid="history"
               onClick={openHistory}
               type="button"
               className="rounded-md bg-black bg-opacity-20 px-4 py-2 text-sm font-medium text-white hover:bg-opacity-30 focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-opacity-75"
@@ -158,6 +159,7 @@ function App() {
             </button>
 
             <button
+              data-testid="new-game"
               type="button"
               onClick={openModal}
               className="rounded-md bg-black bg-opacity-20 px-4 py-2 text-sm font-medium text-white hover:bg-opacity-30 focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-opacity-75"
@@ -171,6 +173,7 @@ function App() {
           <ScoreBoard {...{ xPlaying, scores, name }} />
           <Board onClick={gameOver ? resetGame : clicked} board={board} />
           <button
+            data-testid="reset-game"
             onClick={resetGame}
             className="text-xl p-4 bg-blue-200 w-[200px] rounded-md mt-4 transition hover:bg-blue-400 hover:scale-105"
           >

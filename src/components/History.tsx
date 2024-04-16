@@ -6,11 +6,11 @@ const History = ({ historyModal, closeHistory }: any) => {
 
   useEffect(() => {
     (async () => {
-      const allhistory = await fetch(
-        "https://tictactoe-be.vercel.app/api/get-history"
-      );
-      const parsedHistory = await allhistory.json();
-      setHistories(parsedHistory);
+      // const allhistory = await fetch(
+      //   "https://tictactoe-be.vercel.app/api/get-history"
+      // );
+      // const parsedHistory = await allhistory.json();
+      setHistories([]);
     })();
   }, [historyModal]);
 
